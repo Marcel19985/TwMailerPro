@@ -1,0 +1,41 @@
+Arbeiten mit dem Programm: in WSL
+
+1. Kompilieren:
+make
+
+2. Server starten (muss im Terminal von VS Code sein für die Linux Umgebung):
+./twmailer-server 6543 maildir
+
+3. Client starten (dafür muss ein neuer Terminal in VS Code verwendet werden):
+./twmailer-client 127.0.0.1 6543
+
+4. Testen: im Client Terminal können dann die jeweiligen Funktionen getestet werden:
+
+z.B.:
+SEND
+sender1
+receiver1
+Test Subject
+This is a test message.
+.
+
+z.B.:
+LIST
+receiver1
+
+z.B.:
+READ
+receiver1
+1
+
+z.B.:
+DEL
+receiver1
+1
+
+Um vom Server zu trennen:
+QUIT
+
+Anmerkungen:
+SEND geht so halbwegs wobei ich nicht sicher bin ob die Daten gescheit im File abgespeichert werden (aber es wird zumindest in einem File gespeichert)
+LIST, READ und DELETE gehen denk ich noch nicht ganz wie es sein sollte.
